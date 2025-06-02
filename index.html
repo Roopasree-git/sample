@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flora of LPU</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="color">
+        <nav id="navbar">
+            <div class="name">
+                <a href="#home" class="main">
+                    Flora of LPU
+                </a>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+            <ul class="menu">
+                <li>
+                    <a href="#home" class="homebtn">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#search" class="searchbtn">
+                        Search
+                    </a>
+                </li>
+                <li>
+                    <a href="#features" class="featuresbtn">
+                        Key Features
+                    </a>
+                </li>
+                <li>
+                    <a href="#involve" class="involvebtn">
+                        Get Involved
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact" class="contactbtn">
+                        Contact Us
+                    </a>
+                </li>
+                <li>
+                    <a href="#about" class="aboutbtn">
+                        About us
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <section id="home" class="home">
+            <!-- <div class="home0">
+                Database Of Plants in LPU
+            </div> -->
+            <div class="home1">
+                Unveiling LPU's Botanical Treasures
+            </div>
+            <div class="home2">
+                Welcome to Lovely Professional University's Plant Database!
+            </div>  
+        </section>
+    </div>
+    <section id="search" class="search">
+    <div class="color1">   
+            <div class="search1">
+                Explore the rich diversity of plants in our beautiful campus. Our interactive plant database offers detailed information on various plant species and their significance.
+            </div>
+            <div class="search2">
+                Use the dropdown menu to choose a plant using <span class="mark">common names</span> from our database and get instant accesss to information about it
+            </div>
+    <form id="plantForm" method="GET">
+        <label for="plants">Select a Plant : </label><br>
+        <select id="plants" onchange="showQRCode(this.value)">
+            <option value="none" selected disabled>Select a Plant</option>
+            <option value="african pine">African Pine</option>
+            <option value="amla tree">Amla Tree</option>
+            <option value="arabian jasmine">Arabian Jasmine</option>
+            <option value="arjun tree">Arjun Tree</option>
+            <option value="ashoka tree">Ashoka Tree</option>
+            <option value="banyan tree">Banyan Tree</option>
+            <option value="birdlime tree">Birdlime Tree</option>
+            <option value="blackboard tree">Blackboard Tree</option>
+            <option value="bottle brush">Bottle Brush</option>
+            <option value="camphor tree">Camphor Tree</option>
+            <option value="chinaberry">Chinaberry</option>
+            <option value="chinese chaste">Chinese Chaste</option>
+            <option value="chinese flame tree">Chinese Flame Tree</option>
+            <option value="date palm">Date Palm</option>
+            <option value="east indian walnut">East Indian Walnut</option>
+            <option value="eastern cottonwood">Eastern Cottonwood</option>
+            <option value="fire bush">Fire Bush</option>
+            <option value="fortunes spindle">Fortune's Spindle</option>
+            <option value="gamhar">Gamhar Tree</option>
+            <option value="hongkong orchid tree">Hongkong Orchid Tree</option>
+            <option value="indian rosewood">Indian Rosewood</option>
+            <option value="jamal gota">Jamal Gota</option>
+            <option value="jamun tree">Jamun Tree</option>
+            <option value="japanese holly">Japanese Holly</option>
+            <option value="jor tor tree">Jor Tor Tree</option>
+            <option value="kachnar">Kachnar</option>
+            <option value="kadam">Kadam</option>
+            <option value="karanja">Karanja</option>
+            <option value="mahua tree">Mahua Tree</option>
+            <option value="moulsari">Moulsari</option>
+            <option value="moutan peopny">Moutan Peony</option>
+            <option value="nagkesar">Nagkesar</option>
+            <option value="paradise tree">Paradise Tree</option>
+            <option value="peepal tree">Peepal Tree</option>
+            <option value="pinwheel tree">Pinwheel Tree</option>
+            <option value="ponytail palm">Ponytail Palm</option>
+            <option value="rangoon creeper">Rangoon Creeper</option>
+            <option value="red cedar">Red Cedar</option>
+            <option value="rose">Rose</option>
+            <option value="safeda tree">Safeda Tree</option>
+            <option value="silver buttonwood">Silver Buttonwood</option>
+            <option value="silevr oak">Silver Oak</option>
+            <option value="singapore graveyard flower">Singapore Graveyard Flower</option>
+            <option value="taiwan cycad">Taiwan Cycad</option>
+            <option value="the false ashoka">The False Ashoka</option>
+            <option value="trumpet vine">Trumpet Vine</option>
+            <option value="weeping fig">Weeping Fig</option>
+            <option value="white fig">White Fig</option>
+            <option value="yellow flame tree">Yellow Flame Tree</option>
+            <option value="yellow oleander">Yellow Oleader</option>
+        </select>
+        <div class="search3">
+            Use the dropdown menu below to choose a <span class="mark">scientific name</span> of a plant from our databes and get instant access to information about it
+        </div> 
+        <label for="scientific name">Select a scientific name : </label><br>
+        <select id="scientific name" onchange="showQRCode(this.value)">
+            <option value="none" selected disabled>Select a Scientific name</option>
+            <option value="african pine">Afrocarpus Falcatus</option>
+            <option value="east indian walnut">Albizia Lebbeck</option>
+            <option value="blackboard tree">Alstonia Scholaris</option>
+            <option value="hongkong orchid tree">Bauhinia Blackeana Dum</option>
+            <option value="kachnar">Bauhinia Variegata</option>
+            <option value="ponytail palm">Beaucarnea Recurvata</option>
+            <option value="bottle brush">Callistemon</option>
+            <option value="camphor tree">Camphora Officinarum</option>
+            <option value="trumpet vine">Campsis Radicans</option>
+            <option value="yellow oleander">Cascabela Thevetia</option>
+            <option value="jor tor tree">Casuarina Equisetifolia</option>
+            <option value="birdlime tree">Ceades Umbellifera</option>
+            <option value="rangoon creeper">Combretum Indicum</option>
+            <option value="silver buttonwood">Conocarpus Erectum</option>
+            <option value="taiwan cycad">Cycas Taiwaniana</option>
+            <option value="indian rosewood">Dalbergia Sissoo</option>
+            <option value="safeda tree">Eucalyptus</option>
+            <option value="fortunes spindle">Euonymus Fortunei</option>
+            <option value="banyan tree">Ficus Benghalensis</option>
+            <option value="weeping fig">Ficus Benjamina</option>
+            <option value="peepal tree">Ficus Religiosa</option>
+            <option value="white fig">Ficus Virens</option>
+            <option value="gamhar">Gmelina Arborea</option>
+            <option value="silver oak">Grevillea Robusta</option>
+            <option value="fire bush">Hamelia Patens</option>
+            <option value="japanese holly">Ilex Crenata</option>
+            <option value="arabian jasmine">Jasminum Sambac</option>
+            <option value="jamal gota">Jatropha Curcas</option>
+            <option value="chinese flame tree">Koelreuteria Bipinnata</option>
+            <option value="mahua tree">Madhuca Longifolia</option>
+            <option value="chinaberry">Melia Azedarach</option>
+            <option value="nagkesar">Mesua Ferrea</option>
+            <option value="moulsari">Mimusops Elengi</option>
+            <option value="the false ashoka">Monoon Longifolium</option>
+            <option value="kadam">Neolamarckia Cadamba</option>
+            <option value="yellow flame tree">Peltophorum Pterocarpum</option>
+            <option value="moutan peony">Peonia Suffruticosa</option>
+            <option value="date palm">Phoenix Dactylifera</option>
+            <option value="amla tree">Phyllanthus Emblica</option>
+            <option value="singapore graveyard flower">Plumeria Obtusa</option>
+            <option value="karanja">Pongamia Pinnata</option>
+            <option value="eastern cottonwood">Populus Deltoides</option>
+            <option value="rose">Rose Cinnamomea</option>
+            <option value="ashoka tree">Saraca Asoca</option>
+            <option value="paradise tree">Simarouba Glauca</option>
+            <option value="jamun tree">Syzygium Cumini</option>
+            <option value="pinwheel tree">Tabemaemontana Divaricata</option>
+            <option value="arjun tree">Terminalia Arjuna</option>
+            <option value="red cedar">Toona Ciliata</option>
+            <option value="chinese chaste">Vitex Negundo</option>
+        </select>
+    </form>
+    </div>
+    </section>
+    <section class="featured">
+        <div class="featured1">
+            Some Featured Plants
+        </div>
+        <div class="row">
+            <div class="column">
+                <img src="images/image1.jpg" height="200px" width="200px">
+            </div>
+            <div class="column">
+                <img src="images/image2.jpg" height="200px" width="200px">
+            </div>
+            <div class="column">
+                <img src="images/image3.jpg" height="200px" width="200px">
+            </div>
+            <div class="column">
+                <img src="images/image4.jpg" height="200px" width="200px">
+            </div>
+            <div class="column">
+                <img src="images/image5.jpg" height="200px" width="200px">
+            </div>
+            <div class="column">
+                <img src="images/image6.jpg" height="200px" width="200px">
+            </div>
+        </div>
+    </section>
+    <section id="mission" class="mission">
+        <div class="mission0">
+            Our Mission
+        </div>
+        <div class="mission1">
+            At Lovely Professional University, we are committed to fostering an environment where biodiversity thrives. Our plant database is part of our initiative to educate students and visitors about the incredible variety of plant life in our campus. At the heart of our mission is a deep love for nature and a commitment to sharing knowledge. Our plant database, enriched with QR codes for easy access, is the result of a collaborative effort between two dedicated individuals with distinct but complementary roles.
+        </div>
+    </section>
+    <section id="features" class="features">
+        <div class="feature0">
+            Key Features
+        </div>
+        <ul>
+            <li>
+                <div class="feature1">
+                    QR Code Integration : 
+                </div> 
+                <div class="sub1">
+                    Each plant has it's own QR. Just select the plant name and scan the QR to get the information.
+                </div>
+            </li>
+            <li>
+                <div class="feature2">
+                    Detailed Plant Profiles : 
+                </div>
+                <div class="sub2">
+                    Our database provides common name, scientific name, origin, family, kingdom and order of the plants.
+                </div>
+            </li>
+            <li>
+                <div class="feature3">
+                    Explore with Ease : 
+                </div>
+                <div class="sub3">
+                    Explore the greenary of LPU campus with ease using our database.
+                </div>
+            </li>
+        </ul>
+    </section>
+    <secton id="involve" class="involve">
+        <div class="involve0">
+            Get Involved
+        </div>
+        <div class="involve1">
+            Whether you're a student, a researcher, or simply a plant enthusiast, our database is designed to inspire and educate. Explore, learn, and grow with us as we continue to expand and enrich our collection. Together, let's cultivate a deeper appreciation for the green world around us. Interested in contributing to our plant database? Contact us at the email given below.
+        </div>
+    </secton>
+    <section id="contact" class="contact">
+        <div class="contact0">
+            Contact Us
+        </div>
+        <div class="contact1">
+            We welcome your feedback and questions. Reach out to us at <a href="mailto:abc@gmail.com" class="white">mail</a> for more information or to share your thoughts on the plant database and to get involved with us.
+        </div>
+    </section>
+    <section id="about" class="about">
+        <div class="about0">
+            About us
+        </div>
+        <!-- <div class="team"> -->
+            <div class="roopa">
+                <div class="teammate1">
+                    <img src="images/roopa.jpg" height="200px" breadth="200px">
+                </div>
+                <div class="txt1">
+                    <h1>Roopasree</h1>
+                    <p>As a beginner in computer science, Roopasree is already making remarkable strides in her technical journey. She has designed and developed the user-friendly database, ensuring it runs smoothly and efficiently. Her growing expertise in coding and database management makes it easy for users to navigate through the plant information and utilize the QR codes seamlessly.</p>
+                </div>
+            </div>
+            <div class="anish">
+                <div class="teammate2">
+                    <img src="images/anish.jpg" height="200px" breadth="200px">
+                </div>
+                <div class="txt2">
+                    <h1>Anish Karthik</h1>
+                    <p>A passionate computer science student, brings his enthusiasm to the project. He meticulously collected and documented detailed information about each plant. His dedication ensures that every entry is accurate and comprehensive, making the database a reliable source for plant lovers and researchers alike.</p>
+                </div>
+            </div>
+            <!-- <div class="teammate3">
+                <img src="" height="200px" width="200px">
+                <h6>Piyush Sharma</h6>
+            </div> -->
+        <!-- </div> -->
+    </section>
+    <script src="script.js"></script>   
+</body>
+</html>
